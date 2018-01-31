@@ -1,18 +1,18 @@
 import { connect } from 'react-redux'
-import actions from '../../actions/'
-import selectors from '../../selectors/'
+import { loginWithPassword } from '../../actions/userActions'
+import { getUserId, getUserName } from '../../selectors/userSelectors'
 import Login from './Login'
 
 const mapStateToProps = (state) => {
   return {
-    // tabFeedIsDisplayed: selectors.getTabFeedIsDisplayed(state)
+    userId: getUserId(state),
+    userName: getUserName(state)
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // listLoaded: (scope, data) => dispatch(actions.listLoaded(scope, data)),
-    // setLoading: (scope, status) => dispatch(actions.setLoading(scope, status))
+    loginWithPassword: (username, password) => dispatch(loginWithPassword(username, password))
   }
 }
 
