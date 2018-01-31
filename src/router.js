@@ -5,10 +5,12 @@ import {
   Link
 } from 'react-router-dom'
 import Login from './components/Login/'
+import Header from './components/commons/Header/Header'
 
 const BasicExample = () => (
   <Router>
     <div>
+      <Header/>
       <ul>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>

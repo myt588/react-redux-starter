@@ -5,9 +5,8 @@ const initialState = {
 
 const user = (state = initialState, action) => {
   switch (action.type) {
-    case 'LOGIN_SUCCESS':
+    case 'USER_LOGIN_SUCCESS':
       return {...state, id: action.user.id, name: action.user.name}
-
     default:
       return state
   }
