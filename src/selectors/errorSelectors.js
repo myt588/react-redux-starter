@@ -1,0 +1,1 @@
+export const getLatestError = (state) => state.errors[0]
